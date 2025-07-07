@@ -10,13 +10,6 @@ The codes are distributed across the following folders:
 - Posture Task-Norm
 
 
-
-{::comment} 
-![picture](FFandFBblock.jpg)
-{:/comment}
-
-
-
 ## Instructions
 
 
