@@ -3,6 +3,10 @@
 ## Description
 This repository contains the codes required to simulate the results from a research study on the scaling of perturbation response times across the size range of terrestrial mammals [publication](https://www.biorxiv.org/content/10.1101/2024.09.23.614404v1). We used computational models to simulate fast perturbation responses under feedback (PD) control and feedforward (bang-bang) control. We studied how control is affected by two limitations: muscle force capacity limits and sensorimotor time delays. We simulated two perturbation response scenarios: a swing leg repositing task after a trip (Swing task), and a posture recovery after a push (Posture task). We developed two types of models: scaled models that are parametrized with inertial, muscular and neural features to represent the size range of terrestrial mammals, and a normalized feedback control model to generate general predictions. 
 
+<!---
+![picture](FBandFFblock.jpg)
+-->
+
 The codes are distributed across the following folders:
 - Swing Task-Scaled
 - Swing Task-Norm
