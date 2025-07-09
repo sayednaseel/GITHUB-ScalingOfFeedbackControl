@@ -8,10 +8,10 @@ This repository contains the codes required to simulate the results from a resea
 -->
 
 The codes are distributed across the following folders:
-- Swing Task-Scaled
-- Swing Task-Norm
-- Posture Task-Scaled
-- Posture Task-Norm
+- Swing Task-Scaled-Feedback
+- Swing Task-Norm-Feedback
+- Posture Task-Scaled-Feedback
+- Posture Task-Norm-Feedback
 
 
 ## Instructions
@@ -30,6 +30,7 @@ The codes are distributed across the following folders:
     - Set graph=0/1 to switch graphs off or on
 - **ddePostureTask_Scaled**: This function accepts initial guesses for controller gains, optimizes controller gains, and outputs simulation results for a single mass.
 - **Data_PostureTask**: Dataset with results for all masses
+- **Data_Inertialdelay_PostureTask.mat**: Dataset with inertial delay times for swing task.
 
 ## References
 - Effects of sensorimotor delays and muscle force capacity limits on the performance of feedforward and feedback control in animals of different sizes
