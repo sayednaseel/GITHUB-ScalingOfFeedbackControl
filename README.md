@@ -16,16 +16,19 @@ The codes are distributed across the following folders:
 
 ## Instructions
 
-
-**Swing Task-Scaled:** 
-- **Master_SwingTask_Scaled**: This script loads the probability distributions for the input parameters, sets the number of simulations and perturbation size vector, and saves the final results. 
-    - Set opt=0/1 to run or not run optimization
-    - Set graph=1/0 to switch graphs on or off. 
+### **Swing Task-Scaled-Feedback:** 
+- **Master_SwingTask_Scaled**: Script to pass initial guess for controller gains to ddeSwingTask_Scaled.m, collect optimized results, perform linear fit, and graph results. 
+    - Set opt=0/1 to run initial guess/run optimization
+    - Set graph=0/1 to switch graphs off or on
 - **ddeSwingTask_Scaled**: This function accepts initial guesses for controller gains, optimizes controller gains, and outputs simulation results for a single mass.
-- **Data_Swng task**: Dataset with results for all masses
+- **Data_SwingTask**: Dataset with results for all masses
 
-**Posture Task-Scaled**
-- **Master_PostureTask_Scaled**: 
+### **Posture Task-Scaled-Feedback**
+- **Master_PostureTask_Scaled**: Script to pass initial guess for controller gains to ddePostureTask_Scaled.m, collect optimized results, perform linear fit, and graph results.  
+    - Set opt=0/1 to run initial guess/run optimization
+    - Set graph=0/1 to switch graphs off or on
+- **ddePostureTask_Scaled**: This function accepts initial guesses for controller gains, optimizes controller gains, and outputs simulation results for a single mass.
+- **Data_PostureTask**: Dataset with results for all masses
 
 ## References
 - Effects of sensorimotor delays and muscle force capacity limits on the performance of feedforward and feedback control in animals of different sizes
