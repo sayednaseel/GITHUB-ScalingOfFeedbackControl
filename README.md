@@ -21,7 +21,8 @@ The codes are distributed across the following folders:
     - Set opt=0/1 to run initial guess/run optimization
     - Set graph=0/1 to switch graphs off or on
 - **ddeSwingTask_Scaled**: This function accepts initial guesses for controller gains, optimizes controller gains, and outputs simulation results for a single mass.
-- **Data_SwingTask**: Dataset with results for all masses
+- **Data_SwingTask.mat**: Dataset with results for all masses
+- **Data_Inertialdelay_SwingTask.mat**: Dataset with inertial delay times for swing task.
 
 ### **Posture Task-Scaled-Feedback**
 - **Master_PostureTask_Scaled**: Script to pass initial guess for controller gains to ddePostureTask_Scaled.m, collect optimized results, perform linear fit, and graph results.  
