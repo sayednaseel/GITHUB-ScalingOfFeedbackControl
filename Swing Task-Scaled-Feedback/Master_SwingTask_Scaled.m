@@ -46,7 +46,7 @@ clear OPvals;
 
 
 %% 
-run_opt=0;% set to 1 to run an optimziation from the above initial guesses, if set to 0, the model will be simulated with the initial guess and output response
+run_opt=1;% set to 1 to run an optimziation from the above initial guesses, if set to 0, the model will be simulated with the initial guess and output response
 %run_single=~(run_opt);% if optimziation is on, no single run. 
 plotfig=0;% to switch on and off figure plotting within the ddeBlock function
 %parms.tend=4;% End time of simulations
