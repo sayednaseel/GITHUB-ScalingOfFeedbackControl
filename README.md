@@ -9,8 +9,10 @@ This repository contains the codes required to simulate the results from a resea
 
 The codes are distributed across the following folders:
 - Swing Task-Scaled-Feedback
+- Swing Task-Scaled-Feedforward
 - Swing Task-Norm-Feedback
 - Posture Task-Scaled-Feedback
+- Posture Task-Scaled-Feedforward
 - Posture Task-Norm-Feedback
 
 
@@ -18,19 +20,26 @@ The codes are distributed across the following folders:
 
 ### **Swing Task-Scaled-Feedback:** 
 - **Master_SwingTask_Scaled**: Script to pass initial guess for controller gains to ddeSwingTask_Scaled.m, collect optimized results, perform linear fit, and graph results. 
-    - Set opt=0/1 to run initial guess/run optimization
-    - Set graph=0/1 to switch graphs off or on
+    - Set run_opt=0/1 to run initial guess/run optimization
+    - Set plotfig=0/1 to switch graphs off or on
 - **ddeSwingTask_Scaled**: This function accepts initial guesses for controller gains, optimizes controller gains, and outputs simulation results for a single mass.
 - **Data_SwingTask.mat**: Dataset with results for all masses
 - **Data_Inertialdelay_SwingTask.mat**: Dataset with inertial delay times for swing task.
 
+### **Swing Task-Scaled-Feedforward:** 
+- **Master_SwingTask_ScaledFF**: Script to pass initial guess for tswitch to ddeSwingTask_ScaledFF.m, collect optimized results, perform linear fit, and graph results. 
+    - Set run_opt=0/1 to run initial guess/run optimization
+    - Set parms.plotfig=0/1 to switch graphs off or on
+- **odeSwingTask_ScaledFF**: This function accepts initial guesses for Tswitch, optimizes tswitch, and outputs simulation results for a single mass.
+- **Data_SwingTask.matFF**: Dataset with results for all masses
+
 ### **Posture Task-Scaled-Feedback**
 - **Master_PostureTask_Scaled**: Script to pass initial guess for controller gains to ddePostureTask_Scaled.m, collect optimized results, perform linear fit, and graph results.  
-    - Set opt=0/1 to run initial guess/run optimization
-    - Set graph=0/1 to switch graphs off or on
+    - Set run_opt=0/1 to run initial guess/run optimization
+    - Set plotfig=0/1 to switch graphs off or on
 - **ddePostureTask_Scaled**: This function accepts initial guesses for controller gains, optimizes controller gains, and outputs simulation results for a single mass.
 - **Data_PostureTask**: Dataset with results for all masses
-- **Data_Inertialdelay_PostureTask.mat**: Dataset with inertial delay times for swing task.
+- **Data_Inertialdelay_PostureTask.mat**: Dataset with inertial delay times for posture task.
 
 ## References
 - Effects of sensorimotor delays and muscle force capacity limits on the performance of feedforward and feedback control in animals of different sizes
