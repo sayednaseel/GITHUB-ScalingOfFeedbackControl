@@ -19,35 +19,35 @@ The codes are distributed across the following folders:
 ## Instructions
 
 ### **Swing Task-Scaled-Feedback:** 
-- **Master_SwingTask_Scaled.m**: Script to pass initial guess for controller gains to ddeSwingTask_Scaled.m, collect optimized results, perform linear fit, and graph results. 
+- **Master_SwingTask_Scaled.m**: Script to pass initial guess for controller gains to ddeSwingTask_Scaled.m, collect optimized results, perform linear fit, and graph results
     - Set run_opt=0/1 to run initial guess/run optimization
     - Set plotfig=0/1 to switch graphs off or on
-- **ddeSwingTask_Scaled.m**: This function accepts initial guesses for controller gains, optimizes controller gains, and outputs simulation results for a single mass.
+- **ddeSwingTask_Scaled.m**: This function accepts initial guesses for controller gains, optimizes controller gains, and outputs simulation results for a single mass
 - **Data_SwingTask.mat**: Dataset with results for all masses
 - **Data_Inertialdelay_SwingTask.mat**: Dataset with inertial delay times for swing task
 
 ### **Swing Task-Scaled-Feedforward:** 
-- **Master_SwingTask_ScaledFF.m**: Script to pass initial guess for tswitch to ddeSwingTask_ScaledFF.m, collect optimized results, perform linear fit, and graph results. 
+- **Master_SwingTask_ScaledFF.m**: Script to pass initial guess for tswitch to ddeSwingTask_ScaledFF.m, collect optimized results, perform linear fit, and graph results
     - Set run_opt=0/1 to run initial guess/run optimization
     - Set parms.plotfig=0/1 to switch graphs off or on
-- **odeSwingTask_ScaledFF.m**: This function accepts initial guesses for Tswitch, optimizes tswitch, and outputs simulation results for a single mass.
+- **odeSwingTask_ScaledFF.m**: This function accepts initial guesses for Tswitch, optimizes tswitch, and outputs simulation results for a single mass
 - **Data_SwingTaskFF.mat**: Dataset with results for all masses
 
 ### **Swing Task-Norm-Feedback:** 
-- **SwingTaskNorm.slx**:Simulink model of normalized Swing Task with time delays and actuator saturation limits
-- **init_Norm.m**:Set solver tolerances and error message settings
-- **Landscape_SwingTask_Norm.m**:Code to simulation of the normalized swing task model for input controller gains. And to run a brute force search through Kp and Kd to determine settling times and % overshoot.
-- **Master_SwingTask_Norm.m**:Code to evaluate the relationship between normalized torque limits(tau_iso) and response time (tresp) for the normalized swing task model. For each tau_iso, run_SwingTask_Norm optimizes controller gains to find the fastest settling time without overshoot. Tries fitting different curves to the tau_iso vs tresp relationship.
-- **run_SwingTask_Norm.m**:Code to simulate normalized swing task model and return settling times, overshoot, angle, angular velocity and torque profiles. Optimizes controller gains Kp and Kd to minimize settling time with 0 overshoot.
+- **SwingTaskNorm.slx**: Simulink model of normalized swing task with time delays and actuator saturation limits
+- **init_Norm.m**: Set solver tolerances and error message settings
+- **Landscape_SwingTask_Norm.m**: Code to simulate the normalized swing task model for initial guess controller gains. And to run a brute force search through Kp and Kd to determine settling times and % overshoot
+- **Master_SwingTask_Norm.m**: Code to evaluate the relationship between normalized torque limits(tau_iso) and response time (tresp) for the normalized swing task model. For each tau_iso, run_SwingTask_Norm optimizes controller gains to find the fastest settling time without overshoot. Tries fitting different curves to the tau_iso vs tresp relationship
+- **run_SwingTask_Norm.m**:Code to simulate normalized swing task model for a single tau_iso, and return settling times, overshoot, angle, angular velocity and torque profiles. Optimizes controller gains Kp and Kd to minimize settling time with 0 overshoot
 - **optGains_SwingTask_Norm.mat**:Dataset with optimal controller gains that produced the fastest normalized settling times (7.09)
-- **Landscape_SwingTask_Norm.mat**: Dataset with brute force search results on controller gains in normalized swing task. To view the settling time and overshoot landscapes from a brute force search of Kp and Kd (supplementary material figure S4), set plotfig=1, load this dataset to the workspace, and run the codeblock titled “plotting settling time and overshoot brute force search landscapes”.
-- **TisofitST_v13.mat**:Dataset with optimal controller gains and response times for a range of tau_iso. Normalized swing task model. 
+- **Landscape_SwingTask_Norm.mat**: Dataset with brute force search results on controller gains in normalized swing task. To view the settling time and overshoot landscapes from a brute force search of Kp and Kd (supplementary material figure S4), set plotfig=1, load this dataset to the workspace, and run the codeblock titled “plotting settling time and overshoot brute force search landscapes” in Landscape_SwingTask_Norm.m
+- **TisofitST_v13.mat**:Dataset with optimal controller gains and response times for a range of tau_iso. Normalized swing task model
 
 ### **Posture Task-Scaled-Feedback**
-- **Master_PostureTask_Scaled.m**: Script to pass initial guess for controller gains to ddePostureTask_Scaled.m, collect optimized results, perform linear fit, and graph results.  
+- **Master_PostureTask_Scaled.m**: Script to pass initial guess for controller gains to ddePostureTask_Scaled.m, collect optimized results, perform linear fit, and graph results 
     - Set run_opt=0/1 to run initial guess/run optimization
     - Set plotfig=0/1 to switch graphs off or on
-- **ddePostureTask_Scaled.m**: This function accepts initial guesses for controller gains, optimizes controller gains, and outputs simulation results for a single mass.
+- **ddePostureTask_Scaled.m**: This function accepts initial guesses for controller gains, optimizes controller gains, and outputs simulation results for a single mass
 - **Data_PostureTask.mat**: Dataset with results for all masses
 - **Data_Inertialdelay_PostureTask.mat**: Dataset with inertial delay times for posture task
 
