@@ -70,3 +70,16 @@ bioRxiv 2024.09.23.614404; doi: https://doi.org/10.1101/2024.09.23.614404
 - Kilbourne, B.M., Hoffman, L.C., 2013. Scale effects between body size and limb design in quadrupedal mammals. PLoS One 8, e78392.
 - Alexander, R.M., Jayes, A.S., Maloiy, G.M.O., Wathuta, E.M., 1981. Allometry of the leg muscles of mammals. J. Zool. 194, 539–552. https://doi.org/10.1111/j.1469-7998.1981.tb04600.x
 - Shampine, Lawrence F., and Skip Thompson. "Solving ddes in matlab." Applied Numerical Mathematics 37.4 (2001): 441-458.
+
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 (GPLv3) © 2025 Sayed Naseel Mohamed Thangal.
+
+You are free to use, modify, and distribute this software under the following terms:
+
+- You **must** include a copy of the GPLv3 license when redistributing.
+- If you **modify** the code and distribute it, you must also release your modifications under the **same GPLv3 license**.
+- This software is provided **without warranty** of any kind.
+
+The full license text is available in the [LICENSE](LICENSE) file and at [https://www.gnu.org/licenses/gpl-3.0.en.html](https://www.gnu.org/licenses/gpl-3.0.en.html).
