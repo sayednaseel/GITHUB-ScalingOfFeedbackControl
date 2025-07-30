@@ -51,6 +51,16 @@ The codes are distributed across the following folders:
 - **Data_PostureTask.mat**: Dataset with results for all masses
 - **Data_Inertialdelay_PostureTask.mat**: Dataset with inertial delay times for posture task
 
+### **Posture Task-Norm-Feedback:** 
+- **PostureTaskNorm.slx**: Simulink model of normalized Posture task with time delays and actuator saturation limits
+- **init_Norm.m**: Set solver tolerances and error message settings
+- **Landscape_PostureTask_Norm.m**: Code to simulate the normalized Posture task model for initial guess controller gains. And to run a brute force search through Kp and Kd to determine settling times and % overshoot
+- **Master_PostureTask_Norm.m**: Code to evaluate the relationship between normalized torque limits(tau_iso) and response time (tresp) for the normalized Posture task model. For each tau_iso, run_PostureTask_Norm optimizes controller gains to find the fastest settling time without overshoot. Tries fitting different curves to the tau_iso vs tresp relationship
+- **run_PostureTask_Norm.m**:Code to simulate normalized Posture task model for a single tau_iso, and return settling times, overshoot, angle, angular velocity and torque profiles. Optimizes controller gains Kp and Kd to minimize settling time with 0 overshoot
+- **optGains_PostureTask_Norm.mat**:Dataset with optimal controller gains that produced the fastest normalized settling times (7.38)
+- **Landscape_PostureTask_Norm.mat**: Dataset with brute force search results on controller gains in normalized Posture task. To view the settling time and overshoot landscapes from a brute force search of Kp and Kd (supplementary material figure S4), set plotfig=1, load this dataset to the workspace, and run the codeblock titled “plotting settling time and overshoot brute force search landscapes” in Landscape_PostureTask_Norm.m
+- **TisofitPT_v3small.mat**:Dataset with optimal controller gains and response times for a range of tau_iso. Normalized Posture task model
+
 ## References
 - Effects of sensorimotor delays and muscle force capacity limits on the performance of feedforward and feedback control in animals of different sizes
 Sayed Naseel Mohamed Thangal, Heather L. More, C. David Remy, J. Maxwell Donelan
