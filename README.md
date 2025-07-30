@@ -74,7 +74,7 @@ bioRxiv 2024.09.23.614404; doi: https://doi.org/10.1101/2024.09.23.614404
 
 ## License
 
-This project is licensed under the GNU General Public License v3.0 (GPLv3) © 2025 Sayed Naseel Mohamed Thangal.
+This project is licensed under the GNU General Public License v3.0 (GPLv3) © 2025 Sayed Naseel Mohamed Thangal, Heather More, C. David Remy, Max Donelan.
 
 You are free to use, modify, and distribute this software under the following terms:
 
