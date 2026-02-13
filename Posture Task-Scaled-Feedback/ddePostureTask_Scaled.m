@@ -603,10 +603,9 @@ x1lag = Z(1);
 x2lag = Z(2);
 
 % if sim time is less than time delay, make the reference still equal to
-% zero. This feels like a kluge, but I couldn't determine a better way to
-% do it. 
+% zero. 
 if parms.deadz==1% turn off torque during the initial delay period
-if t<=parms.Td, r = 0; end % note there is never a need to remove the reference. 
+if t<=parms.Td, r = 0; end
 end
 %Note: since tspan=[td tend], this is not needed in STG,PTG
 
@@ -616,14 +615,12 @@ end
 u = Kp.*(r-x1lag) + Kd.*(-x2lag);
 gravT=parms.Mass*9.8066*parms.Length*sin(x(1));
 
-% limit the max and min force. This appears to generate simulations that don't make
-% sense. The trajectories look flattened and blocky. I am not sure why. 
+% limit the max and min force. 
 if u >= umax, u = umax; elseif u <= umin, u = umin; end
 
 if parms.deadz==1% turn off torque during the initial delay period
 if t<=parms.Td, u = 0; end
 end
-%Note: since tspan=[td tend], this is not needed in STG,PTG
 
 
 % state derivatives. 
