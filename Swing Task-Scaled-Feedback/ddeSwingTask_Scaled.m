@@ -622,10 +622,9 @@ x1lag = Z(1);
 x2lag = Z(2);
 
 % if sim time is less than time delay, make the reference still equal to
-% zero. This feels like a kluge, but I couldn't determine a better way to
-% do it. 
+% zero.
 if parms.deadz==1% turn off torque during the initial delay period
-if t<=parms.Td, r = 0; end % note there is never a need to remove the reference. 
+if t<=parms.Td, r = 0; end
 end
 
 % feedforward (reset) term to counter final gravity and prevent steady state error
