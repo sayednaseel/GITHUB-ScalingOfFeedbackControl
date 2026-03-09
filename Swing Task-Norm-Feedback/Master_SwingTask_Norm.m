@@ -7,7 +7,7 @@
 clear all;close all;clc
 %%
 
-mdl = 'SwingTaskNorm';% delays moved to feedback pathways
+mdl = 'SwingTaskNorm_DelayTop';% delays moved to feedback pathways
 
 
 load_system(mdl)
@@ -16,7 +16,7 @@ init_Norm(mdl,solver_variable);% applies solver settings to mdl
 hws = get_param(mdl,'modelworkspace');%handle to model workspace
 hws.clear;
 Stoptime=20;% simulation runtime
-run_opt=1;% to run optimization
+run_opt=0;% to run optimization
 plotfig=0;% to plot figures within Run code.
 optimizerMethod = 'fminsearch';
 %optimizerMethod = 'fsolve';

@@ -6,14 +6,16 @@
 clear all;close all;clc;
 %%
 %{1
-mdl = 'SwingTaskNorm';
+mdl = 'SwingTaskNorm_DelayTop';
+%mdl = 'SwingTaskNorm';
+
 
 load_system(mdl)
 solver_variable=1; % 1 for variable step, 2 for fixed step, modify settings within init_SwingTaskCL
 init_Norm(mdl,solver_variable);% applies solver settings to mdl
 hws = get_param(mdl,'modelworkspace');%handle to model workspace
 hws.clear;
-run_Elandscape=1;% to run cost landscape mapping
+run_Elandscape=0;% to run cost landscape mapping
 plotfig=1;% to plot figures
 %}
 %% Define parameters
