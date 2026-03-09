@@ -7,7 +7,7 @@ function [OPtable,OP]=run_PostureTask_Norm(KpIC,KdIC,parms,Stoptime,hws,run_opt,
 
 %{
 clear all;close all;clc;
-mdl = 'PostureTaskNorm';% 
+mdl = 'PostureTaskNorm_DelayTop';% 
 load_system(mdl)
 solver_variable=2; % 1 for variable step, 2 for fixed step, modify settings within init_SwingTaskCL
 init_Norm(mdl,solver_variable);% applies solver settings to mdl

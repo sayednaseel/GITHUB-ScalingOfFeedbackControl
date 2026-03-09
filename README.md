@@ -34,7 +34,7 @@ The codes are distributed across the following folders:
 - **Data_SwingTaskFF.mat**: Dataset with results for all masses
 
 ### **Swing Task-Norm-Feedback:** 
-- **SwingTaskNorm.slx**: Simulink model of normalized swing task with time delays and actuator saturation limits
+- **SwingTaskNorm_DelayTop.slx**: Simulink model of normalized swing task with time delays and actuator saturation limits
 - **init_Norm.m**: Set solver tolerances and error message settings
 - **Landscape_SwingTask_Norm.m**: Code to simulate the normalized swing task model for initial guess controller gains. And to run a brute force search through Kp and Kd to determine settling times and % overshoot
 - **Master_SwingTask_Norm.m**: Code to evaluate the relationship between normalized torque limits(tau_iso) and response time (tresp) for the normalized swing task model. For each tau_iso, run_SwingTask_Norm optimizes controller gains to find the fastest settling time without overshoot. Tries fitting different curves to the tau_iso vs tresp relationship
@@ -59,7 +59,7 @@ The codes are distributed across the following folders:
 - **Data_PostureTaskFF.mat**: Dataset with results for all masses
 
 ### **Posture Task-Norm-Feedback:** 
-- **PostureTaskNorm.slx**: Simulink model of normalized Posture task with time delays and actuator saturation limits
+- **PostureTaskNorm_DelayTop.slx**: Simulink model of normalized Posture task with time delays and actuator saturation limits
 - **init_Norm.m**: Set solver tolerances and error message settings
 - **Landscape_PostureTask_Norm.m**: Code to simulate the normalized Posture task model for initial guess controller gains. And to run a brute force search through Kp and Kd to determine settling times and % overshoot
 - **Master_PostureTask_Norm.m**: Code to evaluate the relationship between normalized torque limits(tau_iso) and response time (tresp) for the normalized Posture task model. For each tau_iso, run_PostureTask_Norm optimizes controller gains to find the fastest settling time without overshoot. Tries fitting different curves to the tau_iso vs tresp relationship

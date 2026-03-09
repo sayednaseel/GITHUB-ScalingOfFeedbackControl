@@ -7,7 +7,8 @@
 
 clear all;close all;clc
 %%
-mdl = 'PostureTaskNorm';
+%mdl = 'PostureTaskNorm';
+mdl = 'PostureTaskNorm_DelayTop';
 
 load_system(mdl)
 solver_variable=2; % 1 for variable step, 2 for fixed step, modify settings within init_SwingTaskCL

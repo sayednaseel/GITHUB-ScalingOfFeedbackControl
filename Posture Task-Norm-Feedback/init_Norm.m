@@ -7,7 +7,7 @@ function []=init_Norm(mdl,solver_variable)
 load_system(mdl)
 
 
-% % here's a way to get solver setting names.
+% % Get solver setting names.
 % configSet = getActiveConfigSet(mdl);
 % configSetNames = get_param(configSet, 'ObjectParameters');
 
